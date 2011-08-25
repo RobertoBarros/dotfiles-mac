@@ -1,0 +1,61 @@
+# cd / path
+alias ..='cd ..'
+alias ...='cd .. ; cd ..'
+function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code project
+alias mkdir='mkdir -p'
+
+#Ruby/Rails
+alias migrate="rake db:migrate db:test:prepare"
+alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
+alias b="bundle"
+alias be="bundle exec"
+
+# powder
+alias p='powder'
+alias pr='powder restart'
+alias pl='powder applog'
+alias ps='powder status'
+alias pdown='powder down'
+alias pup='powder up'
+
+# ls
+alias ls="ls -F"
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+# git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gwhat="git whatchanged"
+
+# Editor
+alias v=mvim
+alias vc=vim
+
+#others
+alias ctags='/usr/local/bin/ctags'
+alias t="tail -f"
+alias reload='. ~/.bash_profile' # reload this file
+
+# Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+alias top='top -o cpu' # ordenado pela CPU
+alias topm='top -o vsize' # ordenado pela Memoria
+
+alias df='df -h' # Show disk usage
+
+killhard() {
+  kill -9 "$1"
+}
+
