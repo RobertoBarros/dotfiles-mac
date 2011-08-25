@@ -1,2 +1,3 @@
 source ~/.bash/completion_scripts/git
 complete -C ~/.bash/completion_scripts/project -o default proj
+complete -C ~/.bash/completion_scripts/rake_completion -o default rake
