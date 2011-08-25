@@ -1,2 +1,2 @@
 source ~/.bash/completion_scripts/git
-
+complete -C ~/.bash/completion_scripts/project -o default proj
