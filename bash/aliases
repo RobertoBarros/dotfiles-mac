@@ -9,6 +9,9 @@ alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias b="bundle"
 alias be="bundle exec"
+function ginstall() {
+  gem install $1 --no-ri --no-rdoc 
+}
 
 # powder
 alias p='powder'
