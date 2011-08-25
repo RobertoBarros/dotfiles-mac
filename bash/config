@@ -1,10 +1,3 @@
-###### PATH ########
-
-
-
-
-
-
 ####### History ###############
 export HISTCONTROL=ignoredups
 export HISTFILESIZE=3000
@@ -63,7 +56,6 @@ else
     find . -iname "$1"
   }
 fi
-
 
 ########## Hello Messsage #################
 echo -ne "Uptime: "; uptime
