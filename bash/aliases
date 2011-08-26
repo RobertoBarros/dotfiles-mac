@@ -3,6 +3,7 @@ alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code project
 alias mkdir='mkdir -p'
+alias tree='tree -C | less -R'
 
 #Ruby/Rails
 alias migrate="rake db:migrate db:test:prepare"
@@ -38,6 +39,7 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gwhat="git whatchanged"
+alias gundo='git reset --soft HEAD^' # Undo your last commit, but don't throw away your changes
 
 # Editor
 alias v=mvim
