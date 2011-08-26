@@ -1,4 +1,4 @@
-# cd / path
+######## cd / path
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
 function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code project
@@ -6,14 +6,14 @@ alias mkdir='mkdir -p'
 alias tree='tree -C | less -R'
 
 
-#Ruby/Rails
+######## Ruby/Rails
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias b="bundle"
 alias be="bundle exec"
 alias rpry="pry -r./config/environment"
 
-# powder
+######## powder
 alias p='powder'
 alias pr='powder restart'
 alias pl='powder applog'
@@ -21,14 +21,14 @@ alias ps='powder status'
 alias pdown='powder down'
 alias pup='powder up'
 
-# ls
+######## ls
 alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
 alias ld='ls -1d */' #Exibe somente diretorios
 
-# git
+####### git
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
@@ -43,11 +43,11 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C
 alias gwhat="git whatchanged"
 alias gundo='git reset --soft HEAD^' # Undo your last commit, but don't throw away your changes
 
-# Editor
+####### Editor
 alias v=mvim
 alias vc=vim
 
-#others
+######## others
 alias ctags='/usr/local/bin/ctags'
 alias t="tail -f"
 alias reload='. ~/.bash_profile' # reload this file
@@ -55,12 +55,25 @@ alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Res
 # Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
+alias ip="lynx -dump http://whatismyip.com | awk '/Your IP Address Is:/ {print \$5}'"
+
 alias top='top -o cpu' # ordenado pela CPU
 alias topm='top -o vsize' # ordenado pela Memoria
 
-alias df='df -h' # Show disk usage
+
+function calc { echo "${1}"|bc -l; }
 
 killhard() {
   kill -9 "$1"
 }
 
+function mvext() { 
+  rename "s/.$1$/.$2/" *."$1" 
+}
+
+######## Disk
+
+#ordered list of subdirectory sizes
+alias ds="du -sk ./* | sort -rn | awk 'BEGIN{ pref[1]=\"K\"; pref[2]=\"M\"; pref[3]=\"G\";} { total = total + \$1; x = \$1; y = 1; while( x > 1024 ) { x = (x + 1023)/1024; y++; } printf(\"%g%s\t%s\n\",int(x*10)/10,pref[y],\$2); } END { y = 1; while( total > 1024 ) { total = (total + 1023)/1024; y++; } printf(\"Total: %g%s\n\",int(total*10)/10,pref[y]); }'"
+
+alias df='df -h' # Show disk usage
