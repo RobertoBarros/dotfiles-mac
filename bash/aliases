@@ -5,6 +5,7 @@ function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code proje
 alias mkdir='mkdir -p'
 alias tree='tree -C | less -R'
 
+
 #Ruby/Rails
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
@@ -25,6 +26,7 @@ alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
+alias ld='ls -1d */' #Exibe somente diretorios
 
 # git
 alias gl='git pull'
