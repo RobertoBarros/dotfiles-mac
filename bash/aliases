@@ -28,6 +28,13 @@ alias ll="ls -l"
 alias la='ls -A'
 alias ld='ls -1d */' #Exibe somente diretorios
 
+####### Safety net
+alias rm='rm -i'
+alias rr="rm -ri"
+alias cp='cp -i'
+alias mv='mv -i'
+
+
 ####### git
 alias gl='git pull'
 alias gp='git push'
