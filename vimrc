@@ -64,3 +64,6 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 
 inoremap <CR> <Esc>
+
+"If you've opened a read-only file then :w!! lets you save it.
+cmap w!! %!sudo tee > /dev/null %
