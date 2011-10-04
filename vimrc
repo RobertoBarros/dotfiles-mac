@@ -67,3 +67,7 @@ inoremap <CR> <Esc>
 
 "If you've opened a read-only file then :w!! lets you save it.
 cmap w!! %!sudo tee > /dev/null %
+
+"Have <esc> remove search highlighting
+nnoremap <silent> <esc> :noh<return><esc>
+
