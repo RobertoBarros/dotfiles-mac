@@ -1,10 +1,13 @@
 if has('win32')
-	source ~/vimfiles/vimrc   "Source: https://github.com/akitaonrails/vimfiles
+  source ~/vimfiles/vimrc   "Source: https://github.com/akitaonrails/vimfiles
 endif
 
 if has('mac')
-    source ~/.vim/vimrc
+  source ~/.vim/vimrc
+  colorscheme ir_dark
+  set guifont=Inconsolata:h16
 endif
+
 
 " Envia mais caracteres ao terminal, melhorando o redraw de janelas.
 set ttyfast
