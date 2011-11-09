@@ -4,8 +4,8 @@ endif
 
 if has('mac')
   source ~/.vim/vimrc
-  colorscheme ir_dark
-  set guifont=Inconsolata:h16
+  colorscheme railscasts2
+  "set guifont=Inconsolata:h16
 endif
 
 
