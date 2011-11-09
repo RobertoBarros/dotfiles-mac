@@ -23,3 +23,6 @@ if defined? Hirb
 
   Hirb.enable
 end
+
+
+# vim: filetype=ruby
