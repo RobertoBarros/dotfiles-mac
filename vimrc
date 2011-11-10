@@ -15,6 +15,9 @@ set ttyfast
 " Salva todos os buffers quando vim perde o foco
 :au FocusLost * :wa
 
+"TAB Repete o último comando de : (dois pontos)
+nmap <TAB> :<UP><CR>
+
 " Alterna entre os buffers usando command+alt+seta esquerda/direita
 let macvim_skip_cmd_opt_movement = 1
 map <D-M-Right> :bn!<CR>
