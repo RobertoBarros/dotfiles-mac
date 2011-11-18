@@ -1,0 +1,108 @@
+"avoiding annoying CSApprox warning message
+let g:CSApprox_verbose_level = 0
+
+"necessary on some Linux distros for pathogen to properly load bundles
+filetype on
+filetype off
+
+call pathogen#infect()
+
+" Envia mais caracteres ao terminal, melhorando o redraw de janelas.
+set ttyfast
+
+if has("gui_running")
+    "tell the term has 256 colors
+    set t_Co=256
+
+    colorscheme railscasts
+    set guitablabel=%M%t
+
+    if has("gui_gnome")
+        set term=gnome-256color
+        colorscheme railscasts
+        set guifont=Monospace\ Bold\ 12
+    endif
+
+    if has("gui_mac") || has("gui_macvim")
+        set guifont=Menlo:h14
+    endif
+
+    if has("gui_win32") || has("gui_win32s")
+        set guifont=Consolas:h12
+        set enc=utf-8
+    endif
+else
+    "dont load csapprox if there is no gui support - silences an annoying warning
+    let g:CSApprox_loaded = 1
+
+    "set railscasts colorscheme when running vim in gnome terminal
+    if $COLORTERM == 'gnome-terminal'
+        set term=gnome-256color
+        colorscheme railscasts
+    else
+        colorscheme default
+    endif
+endif
+
+
+"Use Vim settings, rather then Vi settings (much better!).
+"This must be first, because it changes other options as a side effect.
+set nocompatible
+
+"allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+"store lots of :cmdline history
+set history=1000
+
+set showcmd     "show incomplete cmds down the bottom
+set showmode    "show current mode down the bottom
+
+set incsearch   "find the next match as we type the search
+set hlsearch    "hilight searches by default
+
+set number      "add line numbers
+set showbreak=...
+set wrap linebreak nolist
+
+"mapping for command key to map navigation thru display lines instead
+"of just numbered lines
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
+
+"add some line space for easy reading
+set linespace=4
+
+"disable visual bell
+set visualbell t_vb=
+
+"try to make possible to navigate within lines of wrapped lines
+nmap <Down> gj
+nmap <Up> gk
+set fo=l
+
+"statusline setup
+set statusline=%f       "tail of the filename
+
+"Git
+set statusline+=%{fugitive#statusline()}
+
+"RVM
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
+
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file
+set laststatus=2
+
+"turn off needless toolbar on gvim/mvim
+set guioptions-=T

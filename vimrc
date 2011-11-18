@@ -4,13 +4,8 @@ endif
 
 if has('mac')
   source ~/.vim/vimrc
-  colorscheme railscasts2
-  "set guifont=Inconsolata:h16
 endif
 
-
-" Envia mais caracteres ao terminal, melhorando o redraw de janelas.
-set ttyfast
 
 " Salva todos os buffers quando vim perde o foco
 :au FocusLost * :wa
