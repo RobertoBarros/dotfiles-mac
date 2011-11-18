@@ -3,7 +3,7 @@ if has('win32')
 endif
 
 if has('mac')
-  "source ~/.vim/vimrc
+  source ~/.vim/vimrc
   colorscheme railscasts2
   "set guifont=Inconsolata:h16
 endif
