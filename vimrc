@@ -3,7 +3,7 @@ if has('win32')
 endif
 
 if has('mac')
-  source ~/.vim/vimrc
+  "source ~/.vim/vimrc
   colorscheme railscasts2
   "set guifont=Inconsolata:h16
 endif
@@ -77,3 +77,6 @@ cmap w!! %!sudo tee > /dev/null %
 "Have <esc> remove search highlighting
 nnoremap <silent> <esc> :noh<return><esc>
 
+
+"Mostra a identação ( requer plugin https://github.com/nathanaelkane/vim-indent-guides)
+nmap <Leader>\ :IndentGuidesToggle<CR>
