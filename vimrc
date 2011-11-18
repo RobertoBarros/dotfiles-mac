@@ -69,7 +69,10 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 
-inoremap <CR> <Esc>
+" Usando ENTER para sair do modo de inserção
+" *** Não funciona aqui pois alguns plugins redefinem o <CR>
+" *** Adicionar a linha abaixo no arquivo ~/.vim/after/plugin/after.vim
+" inoremap <CR> <Esc>
 
 "If you've opened a read-only file then :w!! lets you save it.
 cmap w!! %!sudo tee > /dev/null %
