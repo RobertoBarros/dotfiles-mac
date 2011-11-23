@@ -63,71 +63,14 @@ set number      "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
-
-" ==============================  Auto Commands  ===========================
-
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-
-" Restore cursor position to where it was before
-augroup JumpCursorOnEdit
-   au!
-   autocmd BufReadPost *
-            \ if expand("<afile>:p:h") !=? $TEMP |
-            \   if line("'\"") > 1 && line("'\"") <= line("$") |
-            \     let JumpCursorOnEdit_foo = line("'\"") |
-            \     let b:doopenfold = 1 |
-            \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
-            \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-            \        let b:doopenfold = 2 |
-            \     endif |
-            \     exe JumpCursorOnEdit_foo |
-            \   endif |
-            \ endif
-   " Need to postpone using "zv" until after reading the modelines.
-   autocmd BufWinEnter *
-            \ if exists("b:doopenfold") |
-            \   exe "normal zv" |
-            \   if(b:doopenfold > 1) |
-            \       exe  "+".1 |
-            \   endif |
-            \   unlet b:doopenfold |
-            \ endif
-augroup END
-
-"==========================================================================================
-
-
-" """"""""""""""""""""""""""""""
-" " => Visual mode related
-" """"""""""""""""""""""""""""""
-" " Really useful!
-" "  In visual mode when you press * or # to search for the current selection
-" vnoremap <silent> * :call VisualSearch('f')<CR>
-" vnoremap <silent> # :call VisualSearch('b')<CR>
-
-" " From an idea by Michael Naumann
-" function! VisualSearch(direction) range
-"     let l:saved_reg = @"
-"     execute "normal! vgvy"
-
-"     let l:pattern = escape(@", '\\/.*$^~[]')
-"     let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-"     if a:direction == 'b'
-"         execute "normal ?" . l:pattern . "^M"
-"     elseif a:direction == 'f'
-"         execute "normal /" . l:pattern . "^M"
-"     endif
-
-"     let @/ = l:pattern
-"     let @" = l:saved_reg
-" endfunction
 
 cmap <C-R>/ <C-R>=substitute(substitute(@/, '^\\<', '', ''), '\\>$', '', '') <CR>
 "Global search under cursor
 nmap <leader>s :Ack <cword> <CR>
 
+"Zoom in the current window (https://github.com/vim-scripts/ZoomWin)
 nmap z <C-w>o
 
 "mapping for command key to map navigation thru display lines instead
@@ -154,6 +97,10 @@ nmap <Down> gj
 nmap <Up> gk
 set fo=l
 
+
+"Mapeamento para o Colorizer (https://github.com/lilydjwg/colorizer)
+let g:colorizer_nomap = 1
+nmap <leader>c :ColorToggle<CR>
 
 "Mapeamento para o NERDTree
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
@@ -289,7 +236,7 @@ if has("gui_running")
     set t_Co=256
 
     set background=dark
-    colorscheme railscasts2
+    colorscheme xoria256
     set guitablabel=%M%t
 
     if has("gui_gnome")
@@ -322,7 +269,7 @@ endif
 " -------- StatusLine Setup --------
 set laststatus=2
 
-hi User1 gui=reverse guibg=#005F00
+hi User1 guifg=#005F00
 hi User2 gui=reverse guibg=#800000
 hi User3 gui=reverse guibg=#870000
 hi User4 gui=reverse guibg=#5F0000
@@ -330,7 +277,7 @@ hi User4 gui=reverse guibg=#5F0000
 set statusline=%f       "tail of the filename
 
 "Git
-set statusline+=%1*
+set statusline+=%#Comment#
 set statusline+=%{fugitive#statusline()}
 set statusline+=%*
 
@@ -353,3 +300,4 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=%4*
 set statusline+=\ %P    "percent through file
 set statusline+=%*
+
