@@ -82,3 +82,15 @@
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim-repeat"]
+	path = vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "vim/bundle/minibufexpl"]
+	path = vim/bundle/minibufexpl
+	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "vim/bundle/zenesque"]
+	path = vim/bundle/zenesque
+	url = git://github.com/vim-scripts/zenesque.vim.git
