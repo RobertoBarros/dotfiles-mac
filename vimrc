@@ -180,6 +180,9 @@ nnoremap <silent> <esc> :noh<return><esc>
 let g:netrw_scp_cmd = "pscp.exe -pw <put pass here>" "For windows SSH
 
 
+"Binding for gundo
+nnoremap <D-u> :GundoToggle<CR>
+
 " Salva e dá refresh no browser ativo usando <leader>r
 " Requer plugin https://github.com/mkitt/browser-refresh.vim
 map <silent><leader>r :wa<CR>:RRB<CR>

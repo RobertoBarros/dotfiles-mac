@@ -94,3 +94,6 @@
 [submodule "vim/bundle/zenesque"]
 	path = vim/bundle/zenesque
 	url = git://github.com/vim-scripts/zenesque.vim.git
+[submodule "vim/bundle/Gundo"]
+	path = vim/bundle/Gundo
+	url = https://github.com/vim-scripts/Gundo.git
