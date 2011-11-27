@@ -85,9 +85,6 @@
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim-repeat"]
-	path = vim-repeat
-	url = git://github.com/tpope/vim-repeat.git
 [submodule "vim/bundle/minibufexpl"]
 	path = vim/bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
@@ -97,3 +94,6 @@
 [submodule "vim/bundle/Gundo"]
 	path = vim/bundle/Gundo
 	url = https://github.com/vim-scripts/Gundo.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
