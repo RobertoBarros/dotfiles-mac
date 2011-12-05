@@ -96,6 +96,9 @@ nmap <leader>s :Ack <cword> <CR>
 "Zoom in the current window (https://github.com/vim-scripts/ZoomWin)
 nmap z <C-w>o
 
+" visually select the text that was last edited or pasted
+nnoremap , `[v`]
+
 "mapping for command key to map navigation thru display lines instead
 "of just numbered lines
 vmap <D-j> gj
