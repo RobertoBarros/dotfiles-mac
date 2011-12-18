@@ -213,6 +213,11 @@ cmap <F7> <C-r><C-o>z
 "copy register
 autocmd FocusGained * let @z=@+
 
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
 
 " Usando ENTER para sair do modo de inserção
 " *** Não funciona aqui pois alguns plugins redefinem o <CR>
