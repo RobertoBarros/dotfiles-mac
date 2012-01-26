@@ -32,6 +32,9 @@ let g:CommandTMatchWindowAtTop=1
 "map to bufexplorer
 nnoremap <leader>b :BufExplorer<cr>
 
+"map to YankRing
+nnoremap <leader>y :YRShow<cr>
+
 "Gist-vim configuration https://github.com/mattn/gist-vim
 let g:gist_clip_command = 'pbcopy'
 
