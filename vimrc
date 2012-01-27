@@ -5,7 +5,15 @@ let g:CSApprox_verbose_level = 0
 filetype on
 filetype off
 
+let g:pathogen_disabled = []
+" call add(g:pathogen_disabled, 'minibufexpl')
 call pathogen#infect()
+
+" If you use Vim with many open buffers simultaneously (>15) and
+" you notice that switching buffers takes longer than usual, it
+" is because of MBE's duplicate buffer name checking feature. To
+" turn it off, you add the following:
+let g:miniBufExplCheckDupeBufs = 0
 
 "load ftplugins and indent files
 filetype plugin on
