@@ -283,12 +283,12 @@ if has("gui_running")
     set t_Co=256
 
     set background=dark
-    colorscheme xoria256
+    colorscheme hemisu
     set guitablabel=%M%t
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme railscasts2
+        colorscheme sahara
         set guifont=Monospace\ Bold\ 12
     endif
 
