@@ -283,7 +283,7 @@ if has("gui_running")
     set t_Co=256
 
     set background=dark
-    colorscheme hemisu
+    colorscheme sahara
     set guitablabel=%M%t
 
     if has("gui_gnome")
