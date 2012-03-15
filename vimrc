@@ -9,6 +9,9 @@ let g:pathogen_disabled = []
 " call add(g:pathogen_disabled, 'minibufexpl')
 call pathogen#infect()
 
+" Use ; para entrar em modo de comando
+map ; :
+
 " If you use Vim with many open buffers simultaneously (>15) and
 " you notice that switching buffers takes longer than usual, it
 " is because of MBE's duplicate buffer name checking feature. To
