@@ -1,6 +1,7 @@
 ######## cd / path
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
+alias ....='cd .. ; cd .. ; cd ..'
 function proj { cd ~/Dropbox/ruby/rails/$1; } # changing directory to code project
 alias mkdir='mkdir -p'
 alias tree='tree -C | less -R'
@@ -11,6 +12,7 @@ alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias b="bundle"
 alias be="bundle exec"
+alias beg="bundle exec guard"
 alias rpry="pry -r./config/environment"
 
 ######## powder
@@ -83,8 +85,8 @@ killhard() {
   kill -9 "$1"
 }
 
-function mvext() { 
-  rename "s/.$1$/.$2/" *."$1" 
+function mvext() {
+  rename "s/.$1$/.$2/" *."$1"
 }
 
 alias slow='pv -qL 20' # use para exibir a saida lentamente. Ex: "cat texto.txt | slow"
