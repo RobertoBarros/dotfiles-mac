@@ -106,3 +106,6 @@
 [submodule "vim/bundle/vim-less.git"]
 	path = vim/bundle/vim-less.git
 	url = https://github.com/groenewege/vim-less.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
