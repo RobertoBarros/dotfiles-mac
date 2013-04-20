@@ -73,7 +73,7 @@ alias lock="open /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Res
 # Shows most used commands, cool script I got this from: http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
 
-alias ip="lynx -dump http://whatismyip.com | awk '/Your IP Address Is:/ {print \$5}'"
+alias ip="curl http://ipecho.net/plain; echo"
 
 alias top='top -o cpu' # ordenado pela CPU
 alias topm='top -o vsize' # ordenado pela Memoria
