@@ -1,0 +1,40 @@
+regexp=DEBUG:.*$
+colours=green
+count=once
+-
+regexp=INFO:.*$
+colours=dark blue
+count=once
+-
+regexp=FATAL:.*$
+colours=bold red
+count=once
+-
+regexp=ERROR:.*$
+colours=bold white on_red
+count=once
+-
+regexp=(http|https|www)\S+
+colours=bold blue underline
+count=once
+-
+# match worker name
+regexp=^([^\s]+\s){3}([^\s]+)
+colours=bold red
+count=more
+-
+# not color until worker name
+regexp=^([^\s]+\s){2}([^\s]+)
+colours=white
+count=more
+-
+#PID
+regexp=^([^\s]+\s){1}([^\s]+)
+colours=dark yellow
+count=more
+
+-
+# match date
+regexp=^(....-..-.....:..:...)
+colours=dark cyan
+count=once
