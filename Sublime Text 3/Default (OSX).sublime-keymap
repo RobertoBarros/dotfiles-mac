@@ -1,0 +1,14 @@
+[
+
+	//Plugin: Rails File Switcher
+	{ "keys": ["super+1"], "command": "open_related_rails_model" },
+  { "keys": ["super+2"], "command": "open_related_rails_controller" },
+  { "keys": ["super+3"], "command": "open_related_rails_view" },
+  { "keys": ["super+4"], "command": "open_related_rspec_model" },
+  { "keys": ["super+5"], "command": "open_related_rspec_controller" },
+
+
+
+    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" }
+
+]

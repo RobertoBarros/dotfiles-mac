@@ -1,0 +1,41 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"bold_folder_labels": true,
+	"caret_style": "solid",
+	"color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
+	"file_exclude_patterns":
+	[
+		".DS_Store"
+	],
+	"folder_exclude_patterns":
+	[
+		"bin",
+		".bundle",
+		".git",
+		".sass-cache",
+		"tmp",
+		"log"
+	],
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 15.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"save_on_focus_lost": true,
+	"scroll_past_end": false,
+	"tab_size": 2,
+	"theme": "Flatland Dark.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true,
+	"wide_caret": true,
+	"word_wrap": true
+}
