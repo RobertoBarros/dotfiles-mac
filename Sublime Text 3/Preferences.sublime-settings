@@ -1,22 +1,14 @@
 {
-	"theme": "Flatland Dark.sublime-theme",
-  "color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
-
-  // square file tabs instead of rounded corners
-  "flatland_square_tabs": true,
-  // Monokai color scheme (SublimeText's default) with Flatland background color
-  "color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
-  // Ability to change row height of sidebar tree
-  // Options: xsmall, small, medium, large, xlarge
-  "flatland_sidebar_tree_medium" : true,
-
 	"auto_complete_commit_on_tab": true,
 	"bold_folder_labels": true,
 	"caret_style": "solid",
+	"color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
 	"file_exclude_patterns":
 	[
 		".DS_Store"
 	],
+	"flatland_sidebar_tree_medium": true,
+	"flatland_square_tabs": true,
 	"folder_exclude_patterns":
 	[
 		"bin",
@@ -36,6 +28,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"SublimeCodeIntel",
 		"Vintage"
 	],
 	"line_padding_bottom": 3,
@@ -43,6 +36,7 @@
 	"save_on_focus_lost": true,
 	"scroll_past_end": false,
 	"tab_size": 2,
+	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
