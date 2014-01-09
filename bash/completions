@@ -1,4 +1,7 @@
-source ~/.bash/completion_scripts/git
+#git
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 complete -C ~/.bash/completion_scripts/project -o default proj
 complete -C ~/.bash/completion_scripts/rake_completion -o default rake
 source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
