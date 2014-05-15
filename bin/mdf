@@ -1,0 +1,11 @@
+#!/usr/bin/perl -w
+
+if (@ARGV < 1) {
+   print "Usage: mdf <file glob to search for>\n";
+   exit(1);
+}
+
+my $nameGlob = shift @ARGV;
+
+exec ('mdfind', qq(kMDItemFSName=='${nameGlob}'c), @ARGV) or
+    print $STDERR "Couldn't find mdfind: $!";
