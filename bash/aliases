@@ -99,3 +99,8 @@ alias clock="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput 
 
 alias funfact='wget randomfunfacts.com -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;"'
 
+#Converte um vídeo .mov para .gif: movtogif input.mov out.gif
+movtogif(){
+    ffmpeg -i "$1" -vf scale=800:-1 -r 10 -f image2pipe -vcodec ppm - |\
+    convert -delay 5 -layers Optimize -loop 0 - "$2"
+}
